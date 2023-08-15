@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <section>
+        <div class="count">
+            <h1>Tip Calculator</h1>
+            <label>Bill: </label>
+            <input id="input" type="text" placeholder="Enter a word">
+            <div class="input-group">
+                <label>Rate Service:</label>
+                <select name="rate-service" id="rate" class="my-1">
+                    <option disabled selected value="0">Select an Option</option>
+                    <option value="0.05"id="value1">5% Fair</option>
+                    <option value="0.10"id="value2">10% Fair</option>
+                    <option value="0.15"id="value3">15% Fair</option>
+                </select><br><br>
+            <button id="sub" class="button">Calculat</button>
+            <p>Tip Amount: $ <span id="text">0</span></p>
+      
+            <p>Total Bill: $ <span id="text2">0</span></p>
+        </div>
+
+    </section>
+
+    <script>
+       var a=document.getElementById("input");
+        var b=document.getElementById("sub");
+        var c=document.getElementById("rate");
+        var e=document.getElementById("text");
+        var h=document.getElementById("text2");
+        var d;
+        var m;
+        b.addEventListener('click',function(){
+             d=c.value;    
+             var f= a.value;
+             var x=f*d
+             var g=Math.round(x);
+             e.innerHTML=g;
+             var z=parseInt(g)+parseInt(f);
+             h.innerHTML=z;
+              a.value=""
+             
+         
+        })
+
+    </script>
+
+</body>
+    
+
+
+ 
